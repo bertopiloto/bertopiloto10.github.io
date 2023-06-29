@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Programas Curso de T.I</title>
+  <style>
+    body {
+      background-color: #222;
+      color: #fff;
+
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .programa {
+      width: 200px;
+      height: 300px;
+      background-color: #333;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .programa a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .programa img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    #filtro {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #filtro input {
+      padding: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Programas de T.I.</h1>
+
+  <div id="filtro">
+
+    <input type="text" id="busca" onkeyup="filtrarProgramas()" placeholder="Busque o programa">
+  </div>
+
+  <div class="catalogo">
+    <div class="programa vscode">
+      <a href="https://code.visualstudio.com/" target="_blank">
+        <img src="assets/icons8-visual-studio-48.png" alt="VSCode" width="100" height="100">
+        <p>VSCode</p>
+      </a>
+    </div>
+
+    <div class="programa java">
+      <a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html" target="_blank">
+        <a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html" target="_blank">
+          <a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html" target="_blank">
+            <img src="assets/icons8-java-48.png" alt="Java" width="100" height="100">
+            <p>Java</p>
+          </a>
+    </div>
+
+    <div class="programa cplusplus">
+      <a href="https://www.cplusplus.com/doc/tutorial/" target="_blank">
+        <img src="assets/icons8-c-50.png" alt="C++" width="100" height="100">
+        <p>C++</p>
+      </a>
+    </div>
+
+    <div class="programa xmind">
+      <a href="https://www.xmind.net/" target="_blank">
+        <img src="assets/icons8-xmind-48.png" alt="XMind">
+        <p>XMind</p>
+      </a>
+    </div>
+
+    <div class="programa office365">
+      <a href="https://www.office.com/" target="_blank">
+        <img src="assets/icons8-office-365-48.png" alt="Office 365" width="100" height="100">
+        <p>Office 365</p>
+      </a>
+    </div>
+
+    <div class="programa intellij">
+      <a href="https://www.jetbrains.com/idea/" target="_blank">
+        <img src="assets/icons8-intellij-idea-48.png" alt="IntelliJ" width="100" height="100">
+        <p>IntelliJ</p>
+      </a>
+    </div>
+
+    <div class="programa python">
+      <a href="https://www.python.org/downloads/" target="_blank">
+        <img src="assets/python.png" alt="Python" width="100" height="100">
+        <p>Python</p>
+      </a>
+    </div>
+
+    <div class="programa pencil">
+      <a href="https://pencil.evolus.vn/" target="_blank">
+        <a href="https://pencil.evolus.vn/" target="_blank">
+          <img src="assets/icons8-pencil-48.png" alt="Pencil" width="100" height="100">
+          <p>Pencil</p>
+        </a>
+    </div>
+
+    <div class="programa powerbi">
+      <a href="https://powerbi.microsoft.com/" target="_blank">
+        <img src="assets/icons8-power-bi-48.png" alt="PowerBI" width="100" height="100">
+        <p>PowerBI</p>
+      </a>
+    </div>
+
+    <div class="programa libreoffice">
+      <a href="https://www.libreoffice.org/" target="_blank">
+        <img src="assets/icons8-libre-office-suite-64.png" alt="LibreOffice" width="100" height="100">
+        <p>LibreOffice</p>
+      </a>
+    </div>
+
+    <div class="programa jupyter">
+      <a href="https://jupyter.org/install" target="_blank">
+        <img src="assets/icons8-jupyter-48.png" alt="Jupyter Notebook" width="100" height="100">
+        <p>Jupyter Notebook</p>
+      </a>
+    </div>
+
+    <div class="programa android-studio">
+      <a href="https://developer.android.com/studio" target="_blank">
+        <img src="./assets/android.png" alt="Android Studio" width="100" height="100">
+        <p>Android Studio</p>
+      </a>
+    </div>
+
+    <div class="programa csharp">
+      <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+        <img src="./assets/c.png" alt="C#" width="100" height="100">
+        <p>C#</p>
+      </a>
+    </div>
+
+    <div class="programa mysql">
+      <a href="https://www.mysql.com/" target="_blank">
+        <img src="assets/icons8-mysql-48.png" alt="MySQL" width="100" height="100">
+        <p>MySQL</p>
+      </a>
+    </div>
+
+    <div class="programa 7Zip">
+      <a href="https://www.7-zip.org/" target="_blank">
+        <img src="assets/7.png" alt="7Zip" width="100" height="100">
+        <p>7Zip</p>
+      </a>
+    </div>
+
+
+    <div class="programa Acrobat">
+      <a href="https://get.adobe.com/br/reader/" target="_blank">
+        <img src="assets/icons8-adobe-acrobat-48.png" alt="Acrobat" width="100" height="100">
+        <p>Acrobat Reader</p>
+      </a>
+    </div>
+
+    <div class="programa Eclipse IDE">
+      <a href="https://www.eclipse.org/downloads/" target="_blank">
+        <img src="assets/eclipse.png" alt="Ide Eclipse" width="100" height="100">
+        <p>Eclipse</p>
+      </a>
+    </div>
+
+    <div class="programa Git IDE">
+      <a href="https://git-scm.com/" target="_blank">
+        <img src="assets/icons8-git-48.png" alt="Ide Eclipse" width="100" height="100">
+        <p>Git</p>
+      </a>
+    </div>
+
+    <div class="programa Autocad">
+      <a href="https://www.autodesk.com.br/" target="_blank">
+        <img src="assets/icons8-autocad-48.png" alt="Ide Autocad" width="100" height="100">
+        <p>Autocad</p>
+      </a>
+    </div>
+
+    <div class="programa Blender IDE">
+      <a href="https://www.blender.org/" target="_blank">
+        <img src="assets/icons8-blender-3d-48.png" alt="Ide Eclipse" width="100" height="100">
+        <p>Blender 3d</p>
+      </a>
+    </div>
+
+    <div class="programa VLC IDE">
+      <a href="https://www.videolan.org/" target="_blank">
+        <img src="assets/icons8-cone-de-obras-48.png" alt="Ide Eclipse" width="100" height="100">
+        <p>VLC</p>
+      </a>
+    </div>
+
+    <div class="programa Docker IDE">
+      <a href="https://www.docker.com/products/docker-desktop/" target="_blank">
+        <img src="assets/icons8-docker-48.png" alt="Ide Eclipse" width="100" height="100">
+        <p>Docker</p>
+      </a>
+    </div>
+
+    <div class="programa Node IDE">
+      <a href="https://nodejs.org/pt-br/download" target="_blank">
+        <img src="assets/icons8-node-js-48.png" alt="Ide Eclipse" width="100" height="100">
+        <p>Node-js</p>
+      </a>
+    </div>
+
+    <div class="programa Onedrive">
+      <a href="https://www.microsoft.com/pt-br/microsoft-365/onedrive/download" target="_blank">
+        <img src="assets/icons8-onedrive-48.png" alt="Ide Eclipse" width="100" height="100">
+        <p>OneDrive</p>
+      </a>
+    </div>
+
+    <div class="programa Teams">
+      <a href="https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software" target="_blank">
+        <img src="assets/icons8-microsoft-teams-2019-48.png" alt="App do Teams" width="100" height="100">
+        <p>Microsoft Teams</p>
+      </a>
+    </div>
+
+    <div class="programa Wiresshark">
+      <a href="https://www.wireshark.org/download.html" target="_blank">
+        <img src="assets/icons8-wireshark-64.png" alt="Ide Wireshark" width="100" height="100">
+        <p>WireShark</p>
+      </a>
+    </div>
+
+    <div class="programa Sql">
+      <a href="https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16#download-ssms"
+        target="_blank">
+        <img src="assets/icons8-sql-48.png" alt="Ide Sql" width="100" height="100">
+        <p>Sql Management Studio</p>
+      </a>
+    </div>
+
+    <div class="programa google">
+      <a href="https://chromeenterprise.google/intl/pt_br/browser/download/?utm_source=adwords&utm_medium=cpc&utm_campaign=2023-H1-chromebrowser-paidmed-paiddisplay-other-chromebrowserent&utm_term=downloadnow-chrome-browser-download&utm_content=GCFY&brand=GCFY&gad=1&gclid=CjwKCAjwkeqkBhAnEiwA5U-uM5R-HNbbfEMx-jVspgkeqkCzfhGKKnbjG-Ll5n4cBWWstjcRaLTGYRoCCc8QAvD_BwE&gclsrc=aw.ds#windows-tab"
+        target="_blank">
+        <img src="assets/logo-google-chrome-2048.png" alt="Navegador Google" width="100" height="100">
+        <p>GoogleChrome</p>
+      </a>
+    </div>
+
+    <div class="programa Notepad">
+      <a href="https://notepad-plus-plus.org/downloads/" target="_blank">
+        <img src="assets/icons8-notepad-plus-plus-48.png" alt="Ide Notepad" width="100" height="100">
+        <p>NotePad++</p>
+      </a>
+    </div>
+
+    <div class="programa Sql">
+      <a href="https://www.microsoft.com/pt-br/microsoft-365/onedrive/download" target="_blank">
+        <img src="assets/icons8-microsoft-sql-server-48.png" alt="Ide Sql" width="100" height="100">
+        <p>Sql Management Studio 2022</p>
+      </a>
+    </div>
+
+    <div class="programa Calango">
+      <a href="https://github.com/GeovanaRamos/calango" target="_blank">
+        <img src="assets/calango-icone-provisorio.png" alt="Ide Calango" width="100" height="100">
+        <p>Calango</p>
+      </a>
+    </div>
+
+    <div class="programa Sublime">
+      <a href="https://www.sublimetext.com/download" target="_blank">
+        <img src="assets/icons8-texto-sublime-48.png" alt="Ide Sublime T" width="100" height="100">
+        <p>Sublime Text</p>
+      </a>
+    </div>
+
+    <div class="programa JavaJdk">
+      <a href="https://www.oracle.com/br/java/technologies/downloads/" target="_blank">
+        <img src="assets/icons8-logo-java-coffee-cup-64.png" alt="JavaJdk" width="100" height="100">
+        <p>Java Jdk</p>
+      </a>
+    </div>
+
+    <div class="programa JavaJdkSE">
+      <a href="https://www.oracle.com/br/java/technologies/downloads/" target="_blank">
+        <img src="assets/icons8-java-50.png" alt="JavaSE" width="100" height="100">
+        <p>Java SE</p>
+      </a>
+    </div>
+
+    <div class="programa Xampp">
+      <a href="https://www.apachefriends.org/pt_br/download.html" target="_blank">
+        <img src="assets/xamp.png" alt="Xampp" width="100" height="100">
+        <p>Xampp</p>
+      </a>
+    </div>
+
+
+    <div class="programa Spring">
+      <a href="https://www.apachefriends.org/pt_br/download.html" target="_blank">
+        <img src="assets/spring.png" alt="Springg" width="100" height="100">
+        <p>Spring Tools</p>
+      </a>
+    </div>
+
+    <div class="programa Packet Tracer">
+      <a href="https://www.netacad.com/pt-br/courses/packet-tracer" target="_blank">
+        <img src="assets/cisco-removebg-preview.png" alt="PTracer" width="100" height="100">
+        <p>Cisco Packet Tracer</p>
+      </a>
+    </div>
+
+    <div class="programa ArgoUML Tracer">
+      <a href="https://www.netacad.com/pt-br/courses/packet-tracer" target="_blank">
+        <img src="assets/argo-uml-icon.png" alt="Auml" width="100" height="100">
+        <p>ArgoUML</p>
+      </a>
+    </div>
+
+    <div class="programa DevC++">
+      <a href="https://sourceforge.net/projects/orwelldevcpp/" target="_blank">
+        <img src="assets/dev.png" alt="DevC" width="100" height="100">
+        <p> DevC++</p>
+      </a>
+    </div>
+
+    <div class="programa GeoStudio">
+      <a href="https://www.geoslope.com/learning/downloads" target="_blank">
+        <img src="assets/geo.png" alt="DevC" width="100" height="100">
+        <p>GeoStudio</p>
+      </a>
+    </div>
+
+    <div class="programa JMeter">
+      <a href="https://jmeter.apache.org/download_jmeter.cgi" target="_blank">
+        <img src="assets/eyecatch-jmeter-3-removebg-preview.png" alt="JMeter" width="100" height="100">
+        <p>JMeter</p>
+      </a>
+    </div>
+
+    <div class="programa Kali">
+      <a href="https://www.kali.org/get-kali/#kali-platforms" target="_blank">
+        <img src="assets/icons8-kali-linux-100.png" alt="Kali Linux" width="100" height="100">
+        <p>Kali Linux</p>
+      </a>
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+
+  </div>
+
+  <script>
+    function filtrarProgramas() {
+      let input = document.getElementById("busca").value.toLowerCase();
+      let programas = document.getElementsByClassName("programa");
+
+      for (let i = 0; i < programas.length; i++) {
+        let programa = programas[i];
+        let nomePrograma = programa.getElementsByTagName("p")[0].textContent.toLowerCase();
+
+        if (nomePrograma.includes(input)) {
+          programa.style.display = "flex";
+        } else {
+          programa.style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

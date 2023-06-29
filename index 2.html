@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Programas de T.I.</title>
+  <style>
+    
+    body {
+      background-color: #222;
+      color: #fff;
+   
+      font-family: Arial, sans-serif;
+    }
+   
+    h1 {
+      text-align: center;
+      padding: 20px;
+    }
+   
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+   
+    .programa {
+      width: 200px;
+      height: 300px;
+      background-color: #333;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+   
+    .programa a {
+      color: #fff;
+      text-decoration: none;
+    }
+   
+    .programa img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+   
+    #filtro {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+   
+    #filtro input {
+      padding: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Programas de T.I.</h1>
+ 
+  <div id="filtro">
+    
+    <input type="text" id="busca" onkeyup="filtrarProgramas()" placeholder="Busque o programa">
+  </div>
+ 
+  <div class="catalogo">
+    <div class="programa vscode">
+      <a href="https://code.visualstudio.com/" target="_blank">
+        <img src="assets/icons8-visual-studio-48.png" alt="VSCode" width="100" height="100">
+        <p>VSCode</p>
+      </a>
+    </div>
+ 
+    <div class="programa java">
+      <a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html" target="_blank">
+        <a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html" target="_blank">
+            <a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html" target="_blank">
+                <img src="assets/icons8-java-48.png" alt="Java" width="100" height="100">
+                <p>Java</p>
+      </a>
+    </div>
+ 
+    <div class="programa cplusplus">
+      <a href="https://www.cplusplus.com/doc/tutorial/" target="_blank">
+        <img src="assets/icons8-c-50.png" alt="C++" width="100" height="100">
+    <p>C++</p>
+      </a>
+    </div>
+ 
+    <div class="programa xmind">
+      <a href="https://www.xmind.net/" target="_blank">
+        <img src="icone_xmind.png" alt="XMind">
+        <p>XMind</p>
+      </a>
+    </div>
+ 
+    <div class="programa office365">
+      <a href="https://www.office.com/" target="_blank">
+        <img src="assets/icons8-office-365-48.png" alt="Office 365" width="100" height="100">
+    <p>Office 365</p>
+      </a>
+    </div>
+ 
+    <div class="programa intellij">
+      <a href="https://www.jetbrains.com/idea/" target="_blank">
+        <img src="assets/icons8-intellij-idea-48.png" alt="IntelliJ" width="100" height="100">
+    <p>IntelliJ</p>
+      </a>
+    </div>
+ 
+     <div class="programa python">
+      <a href="https://www.python.org/downloads/" target="_blank">
+        <img src="assets/python.png" alt="Python" width="100" height="100">
+        <p>Python</p>
+      </a>
+    </div>
+ 
+    <div class="programa pencil">
+      <a href="https://pencil.evolus.vn/" target="_blank">
+        <a href="https://pencil.evolus.vn/" target="_blank">
+            <img src="assets/icons8-pencil-48.png" alt="Pencil" width="100" height="100">
+            <p>Pencil</p>
+      </a>
+    </div>
+ 
+    <div class="programa powerbi">
+      <a href="https://powerbi.microsoft.com/" target="_blank">
+        <img src="assets/icons8-power-bi-48.png" alt="PowerBI" width="100" height="100">
+    <p>PowerBI</p>
+      </a>
+    </div>
+ 
+    <div class="programa libreoffice">
+      <a href="https://www.libreoffice.org/" target="_blank">
+        <img src="assets/icons8-libre-office-math-48.png" alt="LibreOffice Math" width="100" height="100">
+    <p>LibreOffice Math</p>
+      </a>
+    </div>
+ 
+    <div class="programa jupyter">
+      <a href="https://jupyter.org/install" target="_blank">
+        <img src="assets/icons8-jupyter-48.png" alt="Jupyter Notebook" width="100" height="100">
+    <p>Jupyter Notebook</p>
+      </a>
+    </div>
+
+    <div class="programa android-studio">
+        <a href="https://developer.android.com/studio" target="_blank">
+          <img src="./assets/android.png" alt="Android Studio" width="100" height="100">
+          <p>Android Studio</p>
+        </a>
+      </div>
+ 
+      <div class="programa csharp">
+        <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+          <img src="./assets/c.png" alt="C#" width="100" height="100">
+          <p>C#</p>
+        </a>
+      </div>
+ 
+      <div class="programa mysql">
+        <a href="https://www.mysql.com/" target="_blank">
+            <img src="assets/icons8-mysql-48.png" alt="MySQL" width="100" height="100">
+          <p>MySQL</p>
+        </a>
+      </div>
+  </div>
+ 
+  <script>
+    function filtrarProgramas() {
+      let input = document.getElementById("busca").value.toLowerCase();
+      let programas = document.getElementsByClassName("programa");
+
+      for (let i = 0; i < programas.length; i++) {
+        let programa = programas[i];
+        let nomePrograma = programa.getElementsByTagName("p")[0].textContent.toLowerCase();
+
+        if (nomePrograma.includes(input)) {
+          programa.style.display = "flex";
+        } else {
+          programa.style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
